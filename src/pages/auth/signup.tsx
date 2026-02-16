@@ -47,6 +47,7 @@ export default function SignupPage() {
     setIsLoading(true);
     try {
       await signup(data.email, data.password, data.displayName, data.language);
+      console.log("sign up procced. ")
       const returnUrl = (router.query.returnUrl as string) || '/';
       router.push(returnUrl);
       toast.success('Account created successfully!');

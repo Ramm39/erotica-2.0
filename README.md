@@ -139,8 +139,8 @@ Create a `.env.local` file in the root directory:
 
 ```env
 # API Configuration
-NEXT_PUBLIC_API_URL=http://localhost:3001/api
-NEXT_PUBLIC_SOCKET_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=http://192.168.29.205:5000/api
+NEXT_PUBLIC_SOCKET_URL=http://localhost:5000
 
 # Firebase (Optional - if using Firebase Auth)
 NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key

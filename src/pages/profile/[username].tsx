@@ -24,7 +24,9 @@ export default function ProfilePage() {
     { enabled: !!username }
   );
 
-  const { data: storiesData } = useQuery(
+  console.log("userData?.data",userData?.data)
+
+  const { data: storiesData } = useQuery( 
     ['user-stories', username],
     () => api.getStories({ authorId: username as string }),
     { enabled: !!username && activeTab === 'stories' }
@@ -37,6 +39,7 @@ export default function ProfilePage() {
   );
 
   const user = userData?.data || userData;
+  console.log("user",user)
   const isOwnProfile = currentUser?.username === username;
   const stories = storiesData?.data || [];
   const bookmarks = bookmarksData?.data || [];
